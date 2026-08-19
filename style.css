@@ -14,23 +14,15 @@ body {
   color: #fff;
   overflow-x: hidden;
 
-  background:
-    linear-gradient(
-      rgba(20, 8, 40, 0.18),
-      rgba(20, 8, 40, 0.45)
-    ),
-    url("image.jpeg");
-
+  background-image: url("image.jpeg");
   background-size: cover;
   background-position: center top;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar {
   position: fixed;
@@ -46,77 +38,73 @@ body {
 
   padding: 0 6%;
 
-  background: rgba(25, 10, 50, 0.58);
-  backdrop-filter: blur(18px);
+  background: rgba(20, 10, 40, 0.45);
+  backdrop-filter: blur(14px);
 
-  border-bottom: 1px solid rgba(255, 180, 235, 0.25);
+  border-bottom: 1px solid rgba(255, 190, 235, 0.25);
 
   z-index: 1000;
 }
 
 .logo {
-  color: #fff;
+  color: white;
   text-decoration: none;
+
   font-size: 24px;
   font-weight: 900;
   font-style: italic;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
-  text-shadow:
-    0 3px 15px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
 }
 
 .navbar nav {
   display: flex;
-  align-items: center;
   gap: 32px;
 }
 
 .navbar nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
 
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 1px;
+  text-transform: uppercase;
 
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
 .navbar nav a:hover {
-  color: #ff9cda;
+  color: #ff9bd7;
 }
 
-.discord-top {
-  padding: 10px 18px;
-
-  color: #fff;
+.discord-button {
+  color: white;
   text-decoration: none;
 
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.5px;
+  padding: 10px 18px;
 
-  border: 1px solid rgba(255, 150, 220, 0.65);
   border-radius: 9px;
 
-  background: rgba(255, 100, 190, 0.12);
+  background: rgba(255, 120, 200, 0.15);
+  border: 1px solid rgba(255, 170, 225, 0.55);
 
-  transition: 0.2s ease;
+  font-size: 11px;
+  font-weight: 800;
+
+  transition: 0.2s;
 }
 
-.discord-top:hover {
-  background: rgba(255, 100, 190, 0.25);
+.discord-button:hover {
+  background: rgba(255, 120, 200, 0.3);
   transform: translateY(-2px);
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-  min-height: 440px;
+  min-height: 520px;
 
   display: flex;
   align-items: center;
@@ -124,58 +112,53 @@ body {
 
   text-align: center;
 
-  padding: 110px 20px 40px;
+  padding: 110px 20px 50px;
 }
 
 .hero-content {
-  max-width: 750px;
+  max-width: 700px;
 }
 
-.project-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.eyebrow {
+  display: block;
 
-  color: #fff;
-
-  font-style: italic;
+  font-size: 22px;
   font-weight: 900;
+  font-style: italic;
+  letter-spacing: 5px;
 
-  line-height: 0.85;
-
-  text-shadow:
-    0 5px 25px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-.project-title span {
-  font-size: clamp(22px, 4vw, 38px);
-  letter-spacing: 4px;
-}
+.hero h1 {
+  margin-top: 5px;
 
-.project-title strong {
-  font-size: clamp(65px, 10vw, 110px);
+  font-size: clamp(75px, 12vw, 130px);
+  line-height: 0.9;
+
+  font-weight: 900;
+  font-style: italic;
   letter-spacing: -5px;
+
+  text-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
 }
 
-.hero-content > p {
+.hero p {
   margin-top: 22px;
 
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
+  font-size: 14px;
+  font-weight: 700;
 
-  color: #fff;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
 }
 
-.main-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 18px;
+.hero-button {
+  display: inline-block;
 
   margin-top: 25px;
-  padding: 13px 24px;
+  padding: 13px 26px;
 
-  color: #fff;
+  color: white;
   text-decoration: none;
 
   font-size: 12px;
@@ -185,110 +168,109 @@ body {
 
   background: linear-gradient(
     135deg,
-    #ed69b2,
-    #a958df
+    #ec69b3,
+    #a657d9
   );
 
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 
   box-shadow:
-    0 8px 30px rgba(185, 60, 170, 0.35);
+    0 8px 25px rgba(180, 60, 160, 0.35);
 
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
-.main-button:hover {
+.hero-button:hover {
   transform: translateY(-3px);
 }
 
 
-/* =========================
-   DONATIONS
-========================= */
+/* DONATIONS */
 
 .donations {
-  max-width: 1080px;
+  width: min(1050px, 92%);
   margin: auto;
 
-  padding: 20px 20px 35px;
+  padding: 25px 0 50px;
 }
 
-.section-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+.section-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-  margin-bottom: 18px;
+.section-heading span {
+  color: #ff9bd7;
 
-  font-size: 20px;
+  font-size: 11px;
   font-weight: 900;
 
-  text-shadow:
-    0 3px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
 }
 
-.section-title span {
-  color: #ff91d2;
+.section-heading h2 {
+  margin-top: 6px;
+
+  font-size: 32px;
+
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
 }
 
-.cards {
+.donation-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 18px;
 }
 
-.card {
+.donation-card {
   position: relative;
+
+  min-height: 275px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  min-height: 285px;
-
-  padding: 27px 22px 20px;
-
   text-align: center;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(43, 22, 65, 0.84),
-      rgba(18, 18, 48, 0.84)
-    );
-
-  border: 1px solid rgba(255, 170, 225, 0.42);
+  padding: 28px 22px 20px;
 
   border-radius: 17px;
+
+  background: rgba(27, 13, 52, 0.68);
+
+  border: 1px solid rgba(255, 175, 225, 0.45);
 
   backdrop-filter: blur(12px);
 
   box-shadow:
-    0 12px 35px rgba(10, 0, 25, 0.35);
+    0 12px 30px rgba(0, 0, 0, 0.25);
 
-  transition: 0.25s ease;
+  transition: 0.25s;
 }
 
-.card:hover {
+.donation-card:hover {
   transform: translateY(-6px);
 
   border-color:
-    rgba(255, 190, 235, 0.85);
+    rgba(255, 200, 240, 0.85);
 
   box-shadow:
-    0 18px 40px rgba(170, 40, 160, 0.3);
+    0 18px 40px rgba(170, 50, 160, 0.3);
 }
 
-.card.featured {
-  border-color: #bd75ff;
+.donation-card.featured {
+  border-color: #c27aff;
 
   box-shadow:
-    0 0 30px rgba(180, 90, 255, 0.2);
+    0 0 30px rgba(180, 90, 255, 0.22);
 }
 
 .popular {
   position: absolute;
+
   top: 0;
   left: 0;
 
@@ -296,12 +278,11 @@ body {
 
   border-radius: 16px 0 10px 0;
 
-  background:
-    linear-gradient(
-      135deg,
-      #ff62b0,
-      #bd54e5
-    );
+  background: linear-gradient(
+    135deg,
+    #ff61af,
+    #b354df
+  );
 
   font-size: 9px;
   font-weight: 900;
@@ -310,29 +291,24 @@ body {
 
 .card-icon {
   font-size: 42px;
-  margin-bottom: 9px;
-
-  filter:
-    drop-shadow(
-      0 4px 8px rgba(0, 0, 0, 0.35)
-    );
+  margin-bottom: 8px;
 }
 
-.card h2 {
+.donation-card h3 {
+  color: #ff9bd7;
+
   font-size: 22px;
   font-weight: 900;
 
-  margin-bottom: 4px;
-
-  color: #ff9bd8;
+  margin-bottom: 5px;
 }
 
-.card:nth-child(2) h2 {
-  color: #c17aff;
+.donation-card:nth-child(2) h3 {
+  color: #c27cff;
 }
 
-.card:nth-child(3) h2 {
-  color: #ffd15c;
+.donation-card:nth-child(3) h3 {
+  color: #ffd35c;
 }
 
 .price {
@@ -340,106 +316,84 @@ body {
   font-weight: 900;
 }
 
-.divider {
-  width: 130px;
-  height: 1px;
+.donation-card p {
+  color: #e6dbe9;
 
-  margin: 8px 0 12px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #ff8fd2,
-      transparent
-    );
-}
-
-.card p {
-  color: #e8dbea;
-
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
 
-  margin-bottom: 18px;
+  margin: 12px 0 20px;
 }
 
-.purchase {
-  width: 88%;
+.purchase-button {
+  width: 90%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+  display: block;
 
   margin-top: auto;
 
-  padding: 11px 16px;
+  padding: 11px;
 
-  color: #fff;
+  color: white;
   text-decoration: none;
 
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 900;
 
   border-radius: 7px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #e65bad,
-      #ad51d7
-    );
+  background: linear-gradient(
+    135deg,
+    #e45aac,
+    #a951d5
+  );
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
-.purchase:hover {
+.purchase-button:hover {
   transform: translateY(-2px);
   filter: brightness(1.1);
 }
 
 
-/* =========================
-   LOWER SECTIONS
-========================= */
+/* INFORMATION */
 
-.lower {
-  max-width: 1080px;
+.information {
+  width: min(1050px, 92%);
   margin: auto;
 
-  padding: 0 20px 30px;
+  padding-bottom: 35px;
 
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
   gap: 14px;
 }
 
-.info-box {
-  padding: 21px;
+.info-card {
+  min-height: 220px;
 
-  min-height: 245px;
-
-  background:
-    rgba(24, 13, 48, 0.78);
-
-  border: 1px solid rgba(255, 160, 220, 0.32);
+  padding: 22px;
 
   border-radius: 15px;
+
+  background: rgba(22, 10, 45, 0.65);
+
+  border: 1px solid rgba(255, 170, 225, 0.3);
 
   backdrop-filter: blur(12px);
 }
 
-.info-box h2 {
+.info-card h2 {
   margin-bottom: 18px;
 
   color: #ffabd9;
 
   font-size: 17px;
-  font-weight: 900;
 }
 
 
@@ -447,14 +401,15 @@ body {
 
 .step {
   display: flex;
-  gap: 12px;
 
-  margin-bottom: 17px;
+  gap: 11px;
+
+  margin-bottom: 15px;
 }
 
-.number {
-  width: 30px;
-  height: 30px;
+.step strong {
+  width: 29px;
+  height: 29px;
 
   flex-shrink: 0;
 
@@ -464,27 +419,25 @@ body {
 
   border-radius: 50%;
 
-  background:
-    linear-gradient(
-      135deg,
-      #ff70bd,
-      #a85ddd
-    );
+  background: linear-gradient(
+    135deg,
+    #ff70bb,
+    #a85bdd
+  );
 
-  font-size: 11px;
-  font-weight: 900;
+  font-size: 10px;
 }
 
 .step h3 {
   margin-bottom: 3px;
 
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .step p {
-  color: #c6b9cf;
+  color: #c9bdce;
 
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.5;
 }
 
@@ -494,15 +447,11 @@ body {
 details {
   margin-bottom: 7px;
 
-  overflow: hidden;
-
   border-radius: 7px;
 
-  background:
-    rgba(8, 10, 38, 0.55);
+  background: rgba(7, 9, 35, 0.5);
 
-  border:
-    1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 summary {
@@ -510,10 +459,10 @@ summary {
 
   cursor: pointer;
 
-  font-size: 12px;
-  font-weight: 700;
-
   list-style: none;
+
+  font-size: 11px;
+  font-weight: 700;
 }
 
 summary::-webkit-details-marker {
@@ -521,97 +470,66 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-  content: "⌄";
+  content: "+";
 
   float: right;
 
-  color: #ff9bd8;
+  color: #ff9bd7;
 }
 
 details[open] summary::after {
-  content: "⌃";
+  content: "−";
 }
 
 details p {
   padding: 0 10px 10px;
 
-  color: #bdb1c7;
+  color: #c4b8ca;
 
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.5;
 }
 
 
 /* DISCORD */
 
-.discord-box {
+.discord-card {
   text-align: center;
 }
 
-.discord-logo {
-  width: 55px;
-  height: 55px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 8px auto 13px;
-
-  border-radius: 14px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #7289da,
-      #5865f2
-    );
-
-  font-size: 9px;
-  font-weight: 900;
-
-  box-shadow:
-    0 8px 20px rgba(70, 80, 180, 0.3);
-}
-
-.discord-box p {
-  color: #d4c9dc;
+.discord-card > p {
+  color: #d2c7da;
 
   font-size: 11px;
   line-height: 1.5;
 
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.discord-box .purchase {
+.discord-card .purchase-button {
   width: 100%;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
   padding: 20px;
 
   text-align: center;
 
-  color: #fff;
+  color: #ddd;
 
-  font-size: 11px;
+  font-size: 10px;
 
-  background:
-    rgba(18, 7, 32, 0.7);
+  background: rgba(12, 5, 25, 0.65);
 
   border-top:
-    1px solid rgba(255, 150, 220, 0.22);
+    1px solid rgba(255, 160, 220, 0.2);
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* MOBILE */
 
 @media (max-width: 850px) {
 
@@ -623,23 +541,15 @@ footer {
     display: none;
   }
 
-  .cards {
+  .donation-grid,
+  .information {
     grid-template-columns: 1fr;
   }
 
-  .lower {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    min-height: 275px;
+  .donation-card {
+    min-height: 260px;
   }
 }
-
-
-/* =========================
-   PHONE
-========================= */
 
 @media (max-width: 500px) {
 
@@ -647,47 +557,23 @@ footer {
     height: 62px;
   }
 
-  .logo {
-    font-size: 20px;
-  }
-
-  .discord-top {
+  .discord-button {
     display: none;
   }
 
   .hero {
-    min-height: 360px;
-    padding-top: 95px;
+    min-height: 400px;
   }
 
-  .project-title strong {
-    font-size: 65px;
-    letter-spacing: -3px;
+  .hero h1 {
+    font-size: 70px;
   }
 
-  .project-title span {
-    font-size: 20px;
-  }
-
-  .hero-content > p {
-    font-size: 10px;
-  }
-
-  .main-button {
+  .hero p {
     font-size: 11px;
   }
 
-  .section-title {
-    font-size: 17px;
-  }
-
-  .donations {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .lower {
-    padding-left: 15px;
-    padding-right: 15px;
+  .section-heading h2 {
+    font-size: 27px;
   }
 }
