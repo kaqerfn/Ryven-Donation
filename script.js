@@ -1,11 +1,11 @@
-// Smooth scrolling for navigation links
+// Smooth scrolling
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
-  link.addEventListener("click", function(event) {
+  link.addEventListener("click", (event) => {
 
     const target = document.querySelector(
-      this.getAttribute("href")
+      link.getAttribute("href")
     );
 
     if (!target) return;
