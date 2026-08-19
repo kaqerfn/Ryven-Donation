@@ -1,7 +1,7 @@
-// Smooth scrolling for navigation links
-
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
+
   link.addEventListener("click", (event) => {
+
     const target = document.querySelector(
       link.getAttribute("href")
     );
@@ -14,5 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       behavior: "smooth",
       block: "start"
     });
+
   });
+
 });
