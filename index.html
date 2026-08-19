@@ -3,867 +3,1346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echo — Support</title>
+
+    <title>Ryven — Support</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
             font-family: "Poppins", sans-serif;
-            color: #fff;
+            color: white;
             min-height: 100vh;
-            background:
-                radial-gradient(circle at 50% 0%, rgba(95, 105, 255, 0.16), transparent 35%),
-                linear-gradient(180deg, #05060d 0%, #080a14 50%, #03040a 100%);
             overflow-x: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(20, 5, 18, 0.52),
+                    rgba(10, 4, 15, 0.72)
+                ),
+                url("background-image.jpeg") center center / cover fixed no-repeat;
+
+            background-color: #120611;
         }
-        body::before {
+
+        body::after {
             content: "";
             position: fixed;
             inset: 0;
             pointer-events: none;
-            opacity: .35;
+            z-index: -1;
+
             background:
-                linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
-            background-size: 50px 50px;
-            mask-image: linear-gradient(to bottom, black, transparent);
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(255, 105, 190, 0.22),
+                    transparent 40%
+                ),
+                linear-gradient(
+                    180deg,
+                    transparent 40%,
+                    rgba(5, 2, 8, 0.55)
+                );
         }
+
         /* NAVBAR */
+
         nav {
             position: fixed;
             top: 18px;
             left: 50%;
             transform: translateX(-50%);
+
             width: min(1100px, calc(100% - 30px));
             min-height: 68px;
+
             padding: 10px 20px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: rgba(8, 10, 22, .75);
-            border: 1px solid rgba(255,255,255,.08);
-            border-radius: 18px;
-            backdrop-filter: blur(22px);
-            -webkit-backdrop-filter: blur(22px);
-            box-shadow: 0 20px 60px rgba(0,0,0,.35);
-            z-index: 999;
+
+            background: rgba(20, 8, 24, 0.68);
+            border: 1px solid rgba(255, 170, 225, 0.15);
+            border-radius: 20px;
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 20px 70px rgba(0, 0, 0, 0.35),
+                inset 0 1px rgba(255,255,255,0.05);
+
+            z-index: 1000;
         }
+
         .logo {
             font-family: "Outfit", sans-serif;
-            font-size: 23px;
+            font-size: 24px;
             font-weight: 800;
             letter-spacing: 1px;
         }
+
         .logo span {
-            color: #7c83ff;
+            color: #ff8bd3;
         }
+
         .nav-links {
             display: flex;
-            gap: 6px;
+            gap: 5px;
         }
+
         .nav-links button {
-            border: 0;
+            border: none;
             background: transparent;
-            color: #969caf;
+
+            color: #c4a9bd;
+
             padding: 11px 15px;
-            border-radius: 11px;
+            border-radius: 12px;
+
             font-family: inherit;
             font-weight: 600;
+
             cursor: pointer;
-            transition: .25s ease;
+            transition: 0.25s ease;
         }
+
         .nav-links button:hover,
         .nav-links button.active {
             color: white;
-            background: rgba(124,131,255,.12);
+
+            background: rgba(255, 125, 204, 0.13);
+
+            box-shadow:
+                inset 0 0 20px rgba(255, 125, 204, 0.05);
         }
+
         /* PAGES */
+
         .page {
             display: none;
+
             min-height: 100vh;
+
             padding: 135px 20px 80px;
-            animation: fadeIn .3s ease;
+
+            animation: fadeIn 0.35s ease;
         }
+
         .page.active {
             display: block;
         }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(8px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .container {
             width: min(1100px, 100%);
             margin: auto;
         }
-        /* HERO */
+
+        /* HOME */
+
         .hero {
             min-height: calc(100vh - 160px);
+
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
             text-align: center;
         }
+
         .badge {
             display: inline-flex;
+
             padding: 8px 15px;
-            border: 1px solid rgba(124,131,255,.25);
-            background: rgba(124,131,255,.08);
+
+            color: #ffb3e3;
+
+            background: rgba(255, 120, 205, 0.10);
+            border: 1px solid rgba(255, 145, 215, 0.25);
+
             border-radius: 999px;
-            color: #aeb3ff;
+
             font-size: 13px;
             font-weight: 600;
+
             margin-bottom: 22px;
+
+            box-shadow:
+                0 0 35px rgba(255, 80, 190, 0.08);
         }
+
         .hero h1 {
             max-width: 900px;
+
             font-family: "Outfit", sans-serif;
-            font-size: clamp(48px, 8vw, 85px);
-            line-height: .95;
+            font-size: clamp(50px, 8vw, 88px);
+            line-height: 0.95;
+
             font-weight: 800;
             letter-spacing: -3px;
+
+            text-shadow:
+                0 10px 50px rgba(0,0,0,.4);
         }
+
         .hero h1 span {
-            background: linear-gradient(90deg, #fff, #858cff);
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #ff9bd8,
+                    #ff73c8
+                );
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .hero p {
             max-width: 650px;
+
             margin-top: 25px;
-            color: #9298ad;
+
+            color: #d2bdcd;
+
             font-size: 16px;
             line-height: 1.8;
         }
+
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
+
             margin-top: 32px;
         }
+
         /* BUTTONS */
+
         .btn {
             border: 0;
             border-radius: 13px;
+
             padding: 14px 22px;
+
             font-family: inherit;
             font-weight: 700;
+
             cursor: pointer;
-            transition: .25s ease;
+
+            transition: 0.25s ease;
         }
+
         .btn-primary {
             color: white;
-            background: linear-gradient(
-                135deg,
-                #6870ff,
-                #8b7cff
-            );
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff68bd,
+                    #c56aff
+                );
+
             box-shadow:
-                0 10px 35px rgba(104,112,255,.25);
+                0 10px 35px rgba(255, 82, 190, 0.22);
         }
+
         .btn-primary:hover {
             transform: translateY(-2px);
+
             box-shadow:
-                0 15px 45px rgba(104,112,255,.35);
+                0 15px 45px rgba(255, 82, 190, 0.35);
         }
+
         .btn-secondary {
-            color: #dce0ee;
-            background: rgba(255,255,255,.05);
-            border: 1px solid rgba(255,255,255,.08);
+            color: #f4ddeb;
+
+            background: rgba(255,255,255,0.055);
+
+            border: 1px solid rgba(255,190,230,0.10);
         }
+
         .btn-secondary:hover {
-            background: rgba(255,255,255,.09);
+            background: rgba(255,120,205,0.10);
         }
+
         /* SECTION HEADER */
+
         .section-header {
             text-align: center;
             margin-bottom: 42px;
         }
+
         .section-header h2 {
             font-family: "Outfit", sans-serif;
-            font-size: clamp(34px, 5vw, 54px);
+
+            font-size: clamp(35px, 5vw, 55px);
+
             font-weight: 800;
             letter-spacing: -1.5px;
+
+            text-shadow:
+                0 10px 35px rgba(0,0,0,.4);
         }
+
         .section-header p {
             margin-top: 10px;
-            color: #8f95aa;
+            color: #d0b9c9;
         }
+
         /* DONATIONS */
+
         .donation-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
             gap: 18px;
         }
+
         .donation-card {
             padding: 27px;
-            border-radius: 20px;
-            background: rgba(255,255,255,.035);
-            border: 1px solid rgba(255,255,255,.075);
-            backdrop-filter: blur(14px);
+
+            border-radius: 21px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(35, 12, 38, 0.72),
+                    rgba(16, 7, 21, 0.62)
+                );
+
+            border: 1px solid rgba(255, 170, 225, 0.11);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.18),
+                inset 0 1px rgba(255,255,255,.035);
+
             transition: .3s ease;
         }
+
         .donation-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(124,131,255,.35);
-            background: rgba(124,131,255,.055);
+            transform: translateY(-6px);
+
+            border-color: rgba(255, 135, 210, 0.30);
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,.25),
+                0 0 35px rgba(255,90,190,.07);
         }
+
         .donation-icon {
-            font-size: 27px;
+            font-size: 28px;
             margin-bottom: 18px;
         }
+
         .donation-card h3 {
             font-family: "Outfit", sans-serif;
             font-size: 22px;
         }
+
         .price {
             margin: 13px 0;
+
             font-size: 30px;
             font-weight: 800;
+
+            color: #ff9bd8;
         }
+
         .donation-card p {
             min-height: 50px;
-            color: #8f95aa;
+
+            color: #c4adbf;
+
             font-size: 14px;
             line-height: 1.7;
         }
+
         .donate-button {
             width: 100%;
             margin-top: 22px;
         }
+
         /* FAQ */
+
         .faq-wrapper {
             width: min(850px, 100%);
             margin: auto;
         }
+
         .faq-item {
             margin-bottom: 12px;
             overflow: hidden;
-            border-radius: 16px;
-            background: rgba(255,255,255,.035);
-            border: 1px solid rgba(255,255,255,.075);
+
+            border-radius: 17px;
+
+            background:
+                rgba(20, 8, 24, 0.66);
+
+            border: 1px solid rgba(255,170,225,.10);
+
+            backdrop-filter: blur(17px);
         }
+
         .faq-question {
             width: 100%;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             padding: 21px 23px;
+
             border: 0;
             background: transparent;
+
             color: white;
+
             font-family: inherit;
             font-size: 15px;
             font-weight: 700;
+
             text-align: left;
+
             cursor: pointer;
         }
-        .faq-question .plus {
-            color: #7c83ff;
+
+        .plus {
+            color: #ff8bd3;
             font-size: 22px;
+
             transition: .25s ease;
         }
+
         .faq-answer {
             display: none;
+
             padding: 0 23px 22px;
-            color: #9298ad;
+
+            color: #c8b2c3;
+
             font-size: 14px;
             line-height: 1.8;
         }
+
         .faq-item.open .faq-answer {
             display: block;
         }
+
         .faq-item.open .plus {
             transform: rotate(45deg);
         }
-        /* IMPORTANT DONATION RULES */
+
+        /* RULES */
+
         .rules-box {
             width: 100%;
+
             margin-top: 35px;
             padding: 35px 25px;
+
             border-radius: 22px;
+
             background:
-                linear-gradient(
-                    180deg,
-                    rgba(255,255,255,.045),
-                    rgba(255,255,255,.025)
-                );
-            border: 1px solid rgba(255,255,255,.08);
+                rgba(17, 6, 20, 0.76);
+
+            border: 1px solid rgba(255,150,215,.12);
+
+            backdrop-filter: blur(18px);
+
             text-align: center;
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,.22);
         }
+
         .rules-box h3 {
             margin-bottom: 25px;
+
             font-family: "Outfit", sans-serif;
             font-size: 25px;
         }
+
         .rule {
             padding: 20px 10px;
-            border-bottom: 1px solid rgba(255,255,255,.06);
+
+            border-bottom:
+                1px solid rgba(255,255,255,.06);
         }
+
         .rule:last-child {
             border-bottom: 0;
         }
+
         .rule strong {
             display: block;
+
             margin-bottom: 7px;
-            color: #fff;
+
+            color: white;
+
             font-size: 17px;
             font-weight: 800;
-            letter-spacing: .4px;
+
+            letter-spacing: .5px;
         }
+
         .rule p {
-            max-width: 650px;
+            max-width: 680px;
             margin: auto;
-            color: #9298ad;
+
+            color: #c5adbe;
+
             font-size: 13px;
             line-height: 1.75;
         }
+
         .critical {
-            color: #ff6f87 !important;
+            color: #ff76c7 !important;
             font-size: 20px !important;
+
+            text-shadow:
+                0 0 20px rgba(255,90,190,.25);
         }
+
         /* DISCORD */
+
         .discord-box {
             width: min(700px, 100%);
             margin: auto;
+
             padding: 45px 30px;
+
             text-align: center;
+
             border-radius: 22px;
-            background: rgba(255,255,255,.035);
-            border: 1px solid rgba(255,255,255,.08);
-            backdrop-filter: blur(15px);
+
+            background:
+                rgba(18, 7, 22, .72);
+
+            border: 1px solid rgba(255,170,225,.12);
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,.25);
         }
+
         .discord-icon {
             font-size: 45px;
             margin-bottom: 15px;
         }
+
         .discord-box h3 {
             font-family: "Outfit", sans-serif;
             font-size: 30px;
         }
+
         .discord-box p {
             max-width: 550px;
             margin: 12px auto 25px;
-            color: #9298ad;
+
+            color: #c8b2c3;
+
             line-height: 1.8;
         }
+
         /* FOOTER */
+
         footer {
             width: min(1100px, calc(100% - 40px));
+
             margin: 0 auto 30px;
             padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,.06);
-            color: #646a7d;
+
+            border-top:
+                1px solid rgba(255,170,225,.08);
+
+            color: #9d8395;
+
             text-align: center;
             font-size: 12px;
         }
+
         /* MOBILE */
+
         @media (max-width: 850px) {
             .donation-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
         @media (max-width: 620px) {
+
             nav {
                 flex-direction: column;
                 gap: 5px;
             }
+
             .nav-links {
                 width: 100%;
                 justify-content: center;
                 overflow-x: auto;
             }
+
             .nav-links button {
                 padding: 8px 10px;
                 font-size: 12px;
             }
+
             .page {
                 padding-top: 150px;
             }
+
             .donation-grid {
                 grid-template-columns: 1fr;
             }
+
             .hero h1 {
                 letter-spacing: -2px;
             }
+
             .rules-box {
                 padding: 28px 15px;
             }
         }
     </style>
 </head>
+
 <body>
+
     <!-- NAVIGATION -->
+
     <nav>
+
         <div class="logo">
-            E<span>CHO</span>
+            R<span>YVEN</span>
         </div>
+
         <div class="nav-links">
+
             <button class="nav-btn active" data-page="home">
                 Home
             </button>
+
             <button class="nav-btn" data-page="donate">
                 Donate
             </button>
+
             <button class="nav-btn" data-page="faq">
                 FAQ
             </button>
+
             <button class="nav-btn" data-page="discord">
                 Discord
             </button>
+
         </div>
+
     </nav>
+
+
     <!-- HOME -->
+
     <main id="home" class="page active">
+
         <div class="hero container">
+
             <div class="badge">
-                SUPPORT ECHO
+                SUPPORT RYVEN
             </div>
+
             <h1>
-                Support the <span>project.</span>
+                Support <span>Ryven.</span>
             </h1>
+
             <p>
-                Help support Echo and its continued development.
-                Your support helps us maintain our services and
-                continue building for the community.
+                Help support Ryven and its continued development.
+                Your support helps us maintain the project,
+                improve the experience, and continue building
+                for the community.
             </p>
+
             <div class="hero-buttons">
+
                 <button
                     class="btn btn-primary"
                     onclick="showPage('donate')"
                 >
-                    Support Echo
+                    Support Ryven
                 </button>
+
                 <button
                     class="btn btn-secondary"
                     onclick="showPage('faq')"
                 >
                     View FAQ
                 </button>
+
             </div>
+
         </div>
+
     </main>
+
+
     <!-- DONATE -->
+
     <main id="donate" class="page">
+
         <div class="container">
+
             <div class="section-header">
+
                 <div class="badge">
                     DONATIONS
                 </div>
+
                 <h2>
-                    Support Echo
+                    Support Ryven
                 </h2>
+
                 <p>
                     Choose a donation package below.
                 </p>
+
             </div>
+
+
             <div class="donation-grid">
-                <!-- DONATOR -->
+
+
                 <div class="donation-card">
+
                     <div class="donation-icon">
                         ❤️
                     </div>
+
                     <h3>
                         Donator
                     </h3>
+
                     <div class="price">
                         $2.99
                     </div>
+
                     <p>
-                        Support Echo with a simple donation.
+                        Support Ryven with a simple donation.
                     </p>
+
                     <button
                         class="btn btn-primary donate-button"
                         onclick="donate('Donator', '$2.99')"
                     >
                         Donate
                     </button>
+
                 </div>
-                <!-- OG PACK -->
+
+
                 <div class="donation-card">
+
                     <div class="donation-icon">
                         🔥
                     </div>
+
                     <h3>
                         OG Pack
                     </h3>
+
                     <div class="price">
                         $4.99
                     </div>
+
                     <p>
-                        Support the project with the OG Pack.
+                        Support Ryven with the OG Pack.
                     </p>
+
                     <button
                         class="btn btn-primary donate-button"
                         onclick="donate('OG Pack', '$4.99')"
                     >
                         Donate
                     </button>
+
                 </div>
-                <!-- OG DONATOR -->
+
+
                 <div class="donation-card">
+
                     <div class="donation-icon">
                         ⭐
                     </div>
+
                     <h3>
                         OG Donator
                     </h3>
+
                     <div class="price">
                         $4.99
                     </div>
+
                     <p>
                         Show your support with the OG Donator package.
                     </p>
+
                     <button
                         class="btn btn-primary donate-button"
                         onclick="donate('OG Donator', '$4.99')"
                     >
                         Donate
                     </button>
+
                 </div>
-                <!-- SWEAT PACK -->
+
+
                 <div class="donation-card">
+
                     <div class="donation-icon">
                         ⚡
                     </div>
+
                     <h3>
                         Sweat Pack
                     </h3>
+
                     <div class="price">
                         $7.99
                     </div>
+
                     <p>
-                        Support Echo with the Sweat Pack.
+                        Support Ryven with the Sweat Pack.
                     </p>
+
                     <button
                         class="btn btn-primary donate-button"
                         onclick="donate('Sweat Pack', '$7.99')"
                     >
                         Donate
                     </button>
+
                 </div>
-                <!-- FULL LOCKER -->
+
+
                 <div class="donation-card">
+
                     <div class="donation-icon">
                         👑
                     </div>
+
                     <h3>
                         Full Locker
                     </h3>
+
                     <div class="price">
                         $15.00
                     </div>
+
                     <p>
                         Get the largest available support package.
                     </p>
+
                     <button
                         class="btn btn-primary donate-button"
                         onclick="donate('Full Locker', '$15.00')"
                     >
                         Donate
                     </button>
+
                 </div>
+
             </div>
+
         </div>
+
     </main>
+
+
     <!-- FAQ -->
+
     <main id="faq" class="page">
+
         <div class="container">
+
             <div class="section-header">
+
                 <div class="badge">
                     FAQ
                 </div>
+
                 <h2>
                     Frequently Asked Questions
                 </h2>
+
                 <p>
                     Everything you need to know before donating.
                 </p>
+
             </div>
+
+
             <div class="faq-wrapper">
-                <!-- HOW TO REDEEM -->
+
+
+                <!-- REDEEM -->
+
                 <div class="faq-item">
+
                     <button class="faq-question">
+
                         <span>
                             How do I redeem my donation?
                         </span>
+
                         <span class="plus">
                             +
                         </span>
+
                     </button>
+
                     <div class="faq-answer">
+
                         After completing your donation, join the
-                        official Echo Discord and open a support ticket.
-                        Provide your purchase information and follow
-                        the instructions from the support team.
+                        official Ryven Discord server and open a
+                        support ticket. Provide your purchase
+                        information and follow the instructions
+                        from the support team.
+
                     </div>
+
                 </div>
+
+
                 <!-- SUPPORT -->
+
                 <div class="faq-item">
+
                     <button class="faq-question">
+
                         <span>
                             Where can I get support?
                         </span>
+
                         <span class="plus">
                             +
                         </span>
+
                     </button>
+
                     <div class="faq-answer">
-                        You can get support through the official Echo
-                        Discord server. Open a support ticket and explain
-                        what you need help with.
+
+                        You can get support through the official
+                        Ryven Discord server. Open a support ticket
+                        and explain what you need help with.
+
                     </div>
+
                 </div>
+
+
                 <!-- AFTER DONATION -->
+
                 <div class="faq-item">
+
                     <button class="faq-question">
+
                         <span>
                             What happens after I donate?
                         </span>
+
                         <span class="plus">
                             +
                         </span>
+
                     </button>
+
                     <div class="faq-answer">
-                        Once your donation has been completed, follow
-                        the redemption instructions and contact support
-                        if you need assistance.
+
+                        After your donation is completed, follow
+                        the redemption instructions and contact
+                        support if you need assistance.
+
                     </div>
+
                 </div>
-                <!-- MULTIPLE DONATIONS -->
+
+
+                <!-- MULTIPLE -->
+
                 <div class="faq-item">
+
                     <button class="faq-question">
+
                         <span>
                             Can I donate more than once?
                         </span>
+
                         <span class="plus">
                             +
                         </span>
+
                     </button>
+
                     <div class="faq-answer">
-                        Yes. You may make additional donations if you
-                        want to continue supporting Echo.
+
+                        Yes. You may make additional donations if
+                        you want to continue supporting Ryven.
+
                     </div>
+
                 </div>
+
+
                 <!-- REQUIRED -->
+
                 <div class="faq-item">
+
                     <button class="faq-question">
+
                         <span>
                             Are donations required?
                         </span>
+
                         <span class="plus">
                             +
                         </span>
+
                     </button>
+
                     <div class="faq-answer">
-                        No. Donations are completely optional and are
-                        intended to support the continued development
-                        and operation of Echo.
+
+                        No. Donations are completely optional and
+                        are intended to support the continued
+                        development and operation of Ryven.
+
                     </div>
+
                 </div>
-                <!-- DONATION RULES -->
+
+
+                <!-- IMPORTANT RULES -->
+
                 <div class="rules-box">
+
                     <h3>
                         Important Donation Information
                     </h3>
-                    <!-- NO REFUNDS -->
+
+
                     <div class="rule">
+
                         <strong class="critical">
                             NO REFUNDS
                         </strong>
+
                         <p>
                             All donations are final and non-refundable.
-                            By donating, you acknowledge that you will not
-                            be able to request or receive a refund after
-                            the donation has been completed.
+                            By donating, you acknowledge that you will
+                            not be able to request or receive a refund
+                            after the donation has been completed.
                         </p>
+
                     </div>
-                    <!-- NO TRANSFERS -->
+
+
                     <div class="rule">
+
                         <strong class="critical">
                             NO TRANSFERS
                         </strong>
+
                         <p>
                             Donations and donation benefits cannot be
-                            transferred to another person, account, or user.
+                            transferred to another person, account,
+                            or user.
                         </p>
+
                     </div>
-                    <!-- ACCOUNT RESPONSIBILITY -->
+
+
                     <div class="rule">
+
                         <strong>
                             ACCOUNT RESPONSIBILITY
                         </strong>
+
                         <p>
                             You are responsible for providing the correct
                             information when completing your donation
                             and redemption.
                         </p>
+
                     </div>
-                    <!-- NO CHARGEBACKS -->
+
+
                     <div class="rule">
+
                         <strong>
                             NO CHARGEBACKS
                         </strong>
+
                         <p>
                             Attempting to reverse a completed donation
                             through a payment provider or chargeback
                             system is not permitted.
                         </p>
+
                     </div>
-                    <!-- DONATION BENEFITS -->
+
+
                     <div class="rule">
+
                         <strong>
                             DONATION BENEFITS
                         </strong>
+
                         <p>
                             Donation benefits are provided according
-                            to the package selected at the time of purchase.
+                            to the package selected at the time
+                            of purchase.
                         </p>
+
                     </div>
-                    <!-- ACCOUNT INFORMATION -->
+
+
                     <div class="rule">
+
                         <strong>
                             ACCOUNT INFORMATION
                         </strong>
+
                         <p>
                             Make sure all information you provide is
                             accurate before completing your donation.
                         </p>
+
                     </div>
-                    <!-- FRAUD -->
+
+
                     <div class="rule">
+
                         <strong>
                             FRAUDULENT PAYMENTS
                         </strong>
+
                         <p>
-                            Fraudulent, unauthorized, or otherwise invalid
-                            payments may result in the associated benefits
-                            being revoked.
+                            Fraudulent, unauthorized, or otherwise
+                            invalid payments may result in the
+                            associated benefits being revoked.
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </main>
+
+
     <!-- DISCORD -->
+
     <main id="discord" class="page">
+
         <div class="container">
+
             <div class="section-header">
+
                 <div class="badge">
                     COMMUNITY
                 </div>
+
                 <h2>
                     Join the Discord
                 </h2>
+
                 <p>
-                    Get support, announcements, and updates from Echo.
+                    Get support, announcements, and updates
+                    from Ryven.
                 </p>
+
             </div>
+
+
             <div class="discord-box">
+
                 <div class="discord-icon">
                     💬
                 </div>
+
                 <h3>
-                    Echo Discord
+                    Ryven Discord
                 </h3>
+
                 <p>
-                    Join our Discord server to stay updated, talk with
-                    the community, and get help with your donation.
+                    Join the Ryven Discord to stay updated,
+                    talk with the community, and get help
+                    with your donation.
                 </p>
+
                 <button
                     class="btn btn-primary"
                     onclick="openDiscord()"
                 >
                     Join Discord
                 </button>
+
             </div>
+
         </div>
+
     </main>
+
+
     <footer>
-        © 2026 Echo. All rights reserved.
+        © 2026 Ryven. All rights reserved.
     </footer>
+
+
     <script>
-        /* YOUR REAL DISCORD INVITE */
+
+        /* DISCORD */
+
         const DISCORD_URL =
             "https://discord.gg/XDDP7UMhZK";
-        /* PAGE SWITCHING */
+
+
+        /* PAGE NAVIGATION */
+
         const navButtons =
             document.querySelectorAll(".nav-btn");
+
         const pages =
             document.querySelectorAll(".page");
+
+
         function showPage(pageName) {
+
             pages.forEach(page => {
                 page.classList.remove("active");
             });
+
             navButtons.forEach(button => {
                 button.classList.remove("active");
             });
+
+
             const selectedPage =
                 document.getElementById(pageName);
+
             if (selectedPage) {
                 selectedPage.classList.add("active");
             }
+
+
             const selectedButton =
                 document.querySelector(
                     `[data-page="${pageName}"]`
                 );
+
             if (selectedButton) {
                 selectedButton.classList.add("active");
             }
+
+
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
+
         }
+
+
         navButtons.forEach(button => {
+
             button.addEventListener("click", () => {
+
                 showPage(button.dataset.page);
+
             });
+
         });
-        /* FAQ ACCORDION */
+
+
+        /* FAQ */
+
         document
             .querySelectorAll(".faq-question")
             .forEach(question => {
+
                 question.addEventListener("click", () => {
+
                     const item =
                         question.parentElement;
+
                     item.classList.toggle("open");
+
                 });
+
             });
-        /* DONATION BUTTON */
+
+
+        /* DONATION */
+
         function donate(packageName, price) {
+
             alert(
                 `You selected ${packageName} (${price}).\n\n` +
-                `Please join the Echo Discord and open a support ticket to continue.`
+                `Join the Ryven Discord and open a support ticket to continue.`
             );
+
             window.open(
                 DISCORD_URL,
                 "_blank"
             );
+
         }
-        /* DISCORD BUTTON */
+
+
+        /* DISCORD */
+
         function openDiscord() {
+
             window.open(
                 DISCORD_URL,
                 "_blank"
             );
+
         }
+
     </script>
+
 </body>
 </html>
