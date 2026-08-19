@@ -32,7 +32,7 @@
                     rgba(20, 5, 18, 0.52),
                     rgba(10, 4, 15, 0.72)
                 ),
-                url("background-image.jpeg") center center / cover fixed no-repeat;
+                url("image.jpeg") center center / cover fixed no-repeat;
 
             background-color: #120611;
         }
@@ -57,7 +57,7 @@
                 );
         }
 
-        /* NAVBAR */
+        /* NAVIGATION */
 
         nav {
             position: fixed;
@@ -81,9 +81,7 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
 
-            box-shadow:
-                0 20px 70px rgba(0, 0, 0, 0.35),
-                inset 0 1px rgba(255,255,255,0.05);
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
 
             z-index: 1000;
         }
@@ -123,22 +121,15 @@
         .nav-links button:hover,
         .nav-links button.active {
             color: white;
-
             background: rgba(255, 125, 204, 0.13);
-
-            box-shadow:
-                inset 0 0 20px rgba(255, 125, 204, 0.05);
         }
 
         /* PAGES */
 
         .page {
             display: none;
-
             min-height: 100vh;
-
             padding: 135px 20px 80px;
-
             animation: fadeIn 0.35s ease;
         }
 
@@ -163,7 +154,7 @@
             margin: auto;
         }
 
-        /* HOME */
+        /* HERO */
 
         .hero {
             min-height: calc(100vh - 160px);
@@ -192,9 +183,6 @@
             font-weight: 600;
 
             margin-bottom: 22px;
-
-            box-shadow:
-                0 0 35px rgba(255, 80, 190, 0.08);
         }
 
         .hero h1 {
@@ -206,9 +194,6 @@
 
             font-weight: 800;
             letter-spacing: -3px;
-
-            text-shadow:
-                0 10px 50px rgba(0,0,0,.4);
         }
 
         .hero h1 span {
@@ -302,14 +287,9 @@
 
         .section-header h2 {
             font-family: "Outfit", sans-serif;
-
             font-size: clamp(35px, 5vw, 55px);
-
             font-weight: 800;
             letter-spacing: -1.5px;
-
-            text-shadow:
-                0 10px 35px rgba(0,0,0,.4);
         }
 
         .section-header p {
@@ -322,7 +302,6 @@
         .donation-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-
             gap: 18px;
         }
 
@@ -341,23 +320,14 @@
             border: 1px solid rgba(255, 170, 225, 0.11);
 
             backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
 
-            box-shadow:
-                0 20px 60px rgba(0,0,0,.18),
-                inset 0 1px rgba(255,255,255,.035);
-
-            transition: .3s ease;
+            transition: 0.3s ease;
         }
 
         .donation-card:hover {
             transform: translateY(-6px);
 
             border-color: rgba(255, 135, 210, 0.30);
-
-            box-shadow:
-                0 25px 70px rgba(0,0,0,.25),
-                0 0 35px rgba(255,90,190,.07);
         }
 
         .donation-icon {
@@ -406,9 +376,7 @@
 
             border-radius: 17px;
 
-            background:
-                rgba(20, 8, 24, 0.66);
-
+            background: rgba(20, 8, 24, 0.66);
             border: 1px solid rgba(255,170,225,.10);
 
             backdrop-filter: blur(17px);
@@ -440,7 +408,6 @@
         .plus {
             color: #ff8bd3;
             font-size: 22px;
-
             transition: .25s ease;
         }
 
@@ -473,17 +440,13 @@
 
             border-radius: 22px;
 
-            background:
-                rgba(17, 6, 20, 0.76);
+            background: rgba(17, 6, 20, 0.76);
 
             border: 1px solid rgba(255,150,215,.12);
 
             backdrop-filter: blur(18px);
 
             text-align: center;
-
-            box-shadow:
-                0 25px 70px rgba(0,0,0,.22);
         }
 
         .rules-box h3 {
@@ -513,8 +476,6 @@
 
             font-size: 17px;
             font-weight: 800;
-
-            letter-spacing: .5px;
         }
 
         .rule p {
@@ -530,9 +491,6 @@
         .critical {
             color: #ff76c7 !important;
             font-size: 20px !important;
-
-            text-shadow:
-                0 0 20px rgba(255,90,190,.25);
         }
 
         /* DISCORD */
@@ -547,15 +505,11 @@
 
             border-radius: 22px;
 
-            background:
-                rgba(18, 7, 22, .72);
+            background: rgba(18, 7, 22, .72);
 
             border: 1px solid rgba(255,170,225,.12);
 
             backdrop-filter: blur(18px);
-
-            box-shadow:
-                0 25px 70px rgba(0,0,0,.25);
         }
 
         .discord-icon {
@@ -688,9 +642,8 @@
 
             <p>
                 Help support Ryven and its continued development.
-                Your support helps us maintain the project,
-                improve the experience, and continue building
-                for the community.
+                Your support helps us maintain the project and
+                continue building for the community.
             </p>
 
             <div class="hero-buttons">
@@ -742,6 +695,8 @@
             <div class="donation-grid">
 
 
+                <!-- DONATOR -->
+
                 <div class="donation-card">
 
                     <div class="donation-icon">
@@ -762,7 +717,7 @@
 
                     <button
                         class="btn btn-primary donate-button"
-                        onclick="donate('Donator', '$2.99')"
+                        onclick="openDundle()"
                     >
                         Donate
                     </button>
@@ -770,61 +725,7 @@
                 </div>
 
 
-                <div class="donation-card">
-
-                    <div class="donation-icon">
-                        🔥
-                    </div>
-
-                    <h3>
-                        OG Pack
-                    </h3>
-
-                    <div class="price">
-                        $4.99
-                    </div>
-
-                    <p>
-                        Support Ryven with the OG Pack.
-                    </p>
-
-                    <button
-                        class="btn btn-primary donate-button"
-                        onclick="donate('OG Pack', '$4.99')"
-                    >
-                        Donate
-                    </button>
-
-                </div>
-
-
-                <div class="donation-card">
-
-                    <div class="donation-icon">
-                        ⭐
-                    </div>
-
-                    <h3>
-                        OG Donator
-                    </h3>
-
-                    <div class="price">
-                        $4.99
-                    </div>
-
-                    <p>
-                        Show your support with the OG Donator package.
-                    </p>
-
-                    <button
-                        class="btn btn-primary donate-button"
-                        onclick="donate('OG Donator', '$4.99')"
-                    >
-                        Donate
-                    </button>
-
-                </div>
-
+                <!-- SWEAT PACK -->
 
                 <div class="donation-card">
 
@@ -846,13 +747,15 @@
 
                     <button
                         class="btn btn-primary donate-button"
-                        onclick="donate('Sweat Pack', '$7.99')"
+                        onclick="openDundle()"
                     >
                         Donate
                     </button>
 
                 </div>
 
+
+                <!-- FULL LOCKER -->
 
                 <div class="donation-card">
 
@@ -874,7 +777,7 @@
 
                     <button
                         class="btn btn-primary donate-button"
-                        onclick="donate('Full Locker', '$15.00')"
+                        onclick="openDundle()"
                     >
                         Donate
                     </button>
@@ -1050,7 +953,7 @@
                 </div>
 
 
-                <!-- IMPORTANT RULES -->
+                <!-- DONATION RULES -->
 
                 <div class="rules-box">
 
@@ -1189,8 +1092,7 @@
                 </h2>
 
                 <p>
-                    Get support, announcements, and updates
-                    from Ryven.
+                    Get support, announcements, and updates from Ryven.
                 </p>
 
             </div>
@@ -1233,10 +1135,11 @@
 
     <script>
 
-        /* DISCORD */
-
         const DISCORD_URL =
             "https://discord.gg/XDDP7UMhZK";
+
+        const DUNDLE_URL =
+            "https://dundle.com/paysafecard/";
 
 
         /* PAGE NAVIGATION */
@@ -1314,17 +1217,12 @@
             });
 
 
-        /* DONATION */
+        /* DONATE → DUNDLE */
 
-        function donate(packageName, price) {
-
-            alert(
-                `You selected ${packageName} (${price}).\n\n` +
-                `Join the Ryven Discord and open a support ticket to continue.`
-            );
+        function openDundle() {
 
             window.open(
-                DISCORD_URL,
+                DUNDLE_URL,
                 "_blank"
             );
 
