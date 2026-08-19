@@ -10,15 +10,11 @@ html {
 
 body {
   min-height: 100vh;
-
   font-family: Arial, Helvetica, sans-serif;
-
   color: #fff;
-
   overflow-x: hidden;
 
   background-image: url("image.jpeg");
-
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -26,13 +22,10 @@ body {
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar {
   position: fixed;
-
   top: 0;
   left: 0;
 
@@ -45,48 +38,37 @@ body {
 
   padding: 0 6%;
 
-  background: rgba(18, 7, 35, 0.55);
-
+  background: rgba(18, 7, 35, 0.58);
   backdrop-filter: blur(16px);
 
-  border-bottom:
-    1px solid rgba(255, 180, 230, 0.25);
+  border-bottom: 1px solid rgba(255, 180, 230, 0.25);
 
   z-index: 1000;
 }
 
 .logo {
   color: #fff;
-
   text-decoration: none;
 
   font-size: 25px;
-
   font-weight: 900;
-
   font-style: italic;
-
   letter-spacing: 3px;
 
-  text-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 .navbar nav {
   display: flex;
-
   gap: 32px;
 }
 
 .navbar nav a {
   color: #fff;
-
   text-decoration: none;
 
   font-size: 11px;
-
   font-weight: 900;
-
   text-transform: uppercase;
 
   transition: 0.2s;
@@ -98,7 +80,6 @@ body {
 
 .discord-button {
   color: #fff;
-
   text-decoration: none;
 
   padding: 10px 18px;
@@ -106,12 +87,9 @@ body {
   border-radius: 8px;
 
   background: rgba(255, 100, 190, 0.15);
-
-  border:
-    1px solid rgba(255, 170, 225, 0.55);
+  border: 1px solid rgba(255, 170, 225, 0.55);
 
   font-size: 11px;
-
   font-weight: 900;
 
   transition: 0.2s;
@@ -119,22 +97,17 @@ body {
 
 .discord-button:hover {
   background: rgba(255, 100, 190, 0.3);
-
   transform: translateY(-2px);
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
   min-height: 540px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   text-align: center;
@@ -150,76 +123,59 @@ body {
   display: block;
 
   font-size: 20px;
-
   font-weight: 900;
-
   font-style: italic;
-
   letter-spacing: 5px;
 
-  text-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
 .hero h1 {
   margin-top: 5px;
 
   font-size: clamp(80px, 13vw, 140px);
-
   line-height: 0.85;
 
   font-weight: 900;
-
   font-style: italic;
-
   letter-spacing: -6px;
 
-  text-shadow:
-    0 7px 25px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 7px 25px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
   margin-top: 25px;
 
   font-size: 14px;
-
   font-weight: 700;
 
-  text-shadow:
-    0 3px 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero-button {
   display: inline-block;
 
   margin-top: 25px;
-
   padding: 13px 28px;
 
   color: #fff;
-
   text-decoration: none;
 
   font-size: 11px;
-
   font-weight: 900;
-
   letter-spacing: 0.5px;
 
   border-radius: 8px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #ed65b3,
-      #a451d6
-    );
+  background: linear-gradient(
+    135deg,
+    #ed65b3,
+    #a451d6
+  );
 
-  border:
-    1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 
-  box-shadow:
-    0 8px 30px rgba(180, 50, 160, 0.35);
+  box-shadow: 0 8px 30px rgba(180, 50, 160, 0.35);
 
   transition: 0.2s;
 }
@@ -229,13 +185,10 @@ body {
 }
 
 
-/* =========================
-   DONATIONS
-========================= */
+/* DONATIONS */
 
 .donations {
   width: min(1080px, 92%);
-
   margin: auto;
 
   padding: 25px 0 60px;
@@ -243,7 +196,6 @@ body {
 
 .section-heading {
   text-align: center;
-
   margin-bottom: 28px;
 }
 
@@ -251,9 +203,7 @@ body {
   color: #ff96d2;
 
   font-size: 10px;
-
   font-weight: 900;
-
   letter-spacing: 3px;
 }
 
@@ -261,11 +211,9 @@ body {
   margin-top: 6px;
 
   font-size: 32px;
-
   font-weight: 900;
 
-  text-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 .section-heading p {
@@ -279,8 +227,7 @@ body {
 .donation-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 18px;
 }
@@ -291,9 +238,7 @@ body {
   min-height: 290px;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
 
   text-align: center;
@@ -302,16 +247,13 @@ body {
 
   border-radius: 17px;
 
-  background:
-    rgba(25, 10, 48, 0.72);
+  background: rgba(25, 10, 48, 0.72);
 
-  border:
-    1px solid rgba(255, 175, 225, 0.42);
+  border: 1px solid rgba(255, 175, 225, 0.42);
 
   backdrop-filter: blur(14px);
 
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 
   transition: 0.25s;
 }
@@ -319,19 +261,15 @@ body {
 .donation-card:hover {
   transform: translateY(-7px);
 
-  border-color:
-    rgba(255, 205, 240, 0.8);
+  border-color: rgba(255, 205, 240, 0.8);
 
-  box-shadow:
-    0 20px 45px rgba(160, 45, 155, 0.3);
+  box-shadow: 0 20px 45px rgba(160, 45, 155, 0.3);
 }
 
 .donation-card.featured {
-  border-color:
-    rgba(194, 122, 255, 0.85);
+  border-color: rgba(194, 122, 255, 0.85);
 
-  box-shadow:
-    0 0 35px rgba(180, 80, 255, 0.18);
+  box-shadow: 0 0 35px rgba(180, 80, 255, 0.18);
 }
 
 .popular {
@@ -342,26 +280,21 @@ body {
 
   padding: 7px 12px;
 
-  border-radius:
-    16px 0 10px 0;
+  border-radius: 16px 0 10px 0;
 
-  background:
-    linear-gradient(
-      135deg,
-      #ff5fad,
-      #b253dc
-    );
+  background: linear-gradient(
+    135deg,
+    #ff5fad,
+    #b253dc
+  );
 
   font-size: 8px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
 .card-icon {
   font-size: 43px;
-
   margin-bottom: 10px;
 }
 
@@ -369,7 +302,6 @@ body {
   color: #ff9bd7;
 
   font-size: 21px;
-
   font-weight: 900;
 }
 
@@ -385,24 +317,21 @@ body {
   margin-top: 3px;
 
   font-size: 32px;
-
   font-weight: 900;
 }
 
 .line {
   width: 120px;
-
   height: 1px;
 
   margin: 9px 0 10px;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #ff91d0,
-      transparent
-    );
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff91d0,
+    transparent
+  );
 }
 
 .donation-card p {
@@ -411,7 +340,6 @@ body {
   color: #ded2e2;
 
   font-size: 11px;
-
   line-height: 1.6;
 
   margin-bottom: 20px;
@@ -427,54 +355,43 @@ body {
   padding: 11px;
 
   color: #fff;
-
   text-decoration: none;
-
   text-align: center;
 
   font-size: 10px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 
   border-radius: 7px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #e45bad,
-      #a851d4
-    );
+  background: linear-gradient(
+    135deg,
+    #e45bad,
+    #a851d4
+  );
 
-  border:
-    1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 
   transition: 0.2s;
 }
 
 .purchase-button:hover {
   transform: translateY(-2px);
-
   filter: brightness(1.12);
 }
 
 
-/* =========================
-   INFORMATION
-========================= */
+/* INFORMATION */
 
 .information {
   width: min(1080px, 92%);
-
   margin: auto;
 
   padding-bottom: 40px;
 
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 15px;
 }
@@ -486,11 +403,9 @@ body {
 
   border-radius: 15px;
 
-  background:
-    rgba(20, 8, 42, 0.7);
+  background: rgba(20, 8, 42, 0.7);
 
-  border:
-    1px solid rgba(255, 170, 225, 0.3);
+  border: 1px solid rgba(255, 170, 225, 0.3);
 
   backdrop-filter: blur(14px);
 }
@@ -501,12 +416,11 @@ body {
   color: #ffaad9;
 
   font-size: 17px;
-
   font-weight: 900;
 }
 
 
-/* STEPS */
+/* HOW IT WORKS */
 
 .step {
   display: flex;
@@ -523,19 +437,16 @@ body {
   flex-shrink: 0;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   border-radius: 50%;
 
-  background:
-    linear-gradient(
-      135deg,
-      #ff70ba,
-      #a759dc
-    );
+  background: linear-gradient(
+    135deg,
+    #ff70ba,
+    #a759dc
+  );
 
   font-size: 9px;
 }
@@ -550,12 +461,15 @@ body {
   color: #c9bdce;
 
   font-size: 10px;
-
   line-height: 1.5;
 }
 
 
 /* FAQ */
+
+.faq-card {
+  min-height: auto;
+}
 
 details {
   margin-bottom: 7px;
@@ -564,11 +478,9 @@ details {
 
   border-radius: 7px;
 
-  background:
-    rgba(5, 6, 30, 0.5);
+  background: rgba(5, 6, 30, 0.5);
 
-  border:
-    1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 summary {
@@ -579,7 +491,6 @@ summary {
   list-style: none;
 
   font-size: 11px;
-
   font-weight: 700;
 }
 
@@ -599,20 +510,61 @@ details[open] summary::after {
   content: "−";
 }
 
-details p {
+details > p {
   padding: 0 10px 10px;
 
   color: #c7bacd;
 
   font-size: 10px;
-
   line-height: 1.5;
 }
 
-.no-refund {
-  color: #ff8cbe !important;
 
+/* IMPORTANT FAQ RULES */
+
+.important-faq {
+  border-color: rgba(255, 105, 170, 0.35);
+}
+
+.important-faq summary {
+  color: #ff9bc9;
   font-weight: 900;
+}
+
+.important-faq summary::after {
+  color: #ff70b5;
+}
+
+.faq-policy {
+  margin: 0 10px 10px;
+
+  padding: 11px;
+
+  border-radius: 7px;
+
+  background: rgba(255, 70, 150, 0.08);
+
+  border-left: 3px solid #ff70b5;
+}
+
+.faq-policy strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #ff83bd;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+}
+
+.faq-policy p {
+  color: #d7c9d7;
+
+  font-size: 10px;
+  line-height: 1.55;
 }
 
 
@@ -626,7 +578,6 @@ details p {
   color: #d2c6d9;
 
   font-size: 11px;
-
   line-height: 1.6;
 
   margin-bottom: 20px;
@@ -637,197 +588,16 @@ details p {
 }
 
 
-/* =========================
-   DONATION POLICY
-========================= */
-
-.policy-section {
-  width: min(1080px, 92%);
-
-  margin: auto;
-
-  padding-bottom: 45px;
-}
-
-.policy-box {
-  padding: 25px;
-
-  border-radius: 17px;
-
-  background:
-    rgba(30, 7, 35, 0.78);
-
-  border:
-    1px solid rgba(255, 105, 170, 0.65);
-
-  box-shadow:
-    0 0 35px rgba(255, 50, 150, 0.1);
-
-  backdrop-filter: blur(15px);
-}
-
-.policy-header {
-  display: flex;
-
-  align-items: center;
-
-  gap: 13px;
-
-  margin-bottom: 15px;
-}
-
-.warning-icon {
-  width: 43px;
-  height: 43px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-shrink: 0;
-
-  border-radius: 11px;
-
-  background:
-    rgba(255, 80, 160, 0.15);
-
-  border:
-    1px solid rgba(255, 120, 180, 0.4);
-
-  color: #ff8fc5;
-
-  font-size: 21px;
-}
-
-.policy-label {
-  color: #ff83bd;
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-}
-
-.policy-header h2 {
-  margin-top: 2px;
-
-  font-size: 23px;
-
-  font-weight: 900;
-}
-
-.policy-intro {
-  margin-bottom: 20px;
-
-  padding: 12px 14px;
-
-  color: #eadce7;
-
-  font-size: 11px;
-
-  line-height: 1.6;
-
-  border-radius: 8px;
-
-  background:
-    rgba(255, 80, 160, 0.08);
-
-  border-left:
-    3px solid #ff72b6;
-}
-
-.policy-list {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
-  gap: 10px;
-}
-
-.policy-item {
-  padding: 14px;
-
-  border-radius: 9px;
-
-  background:
-    rgba(10, 3, 25, 0.5);
-
-  border:
-    1px solid rgba(255, 150, 210, 0.18);
-
-  transition: 0.2s;
-}
-
-.policy-item:hover {
-  border-color:
-    rgba(255, 150, 210, 0.4);
-}
-
-.policy-item h3 {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  margin-bottom: 7px;
-
-  color: #ff91c6;
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: 0.5px;
-}
-
-.policy-item h3 span {
-  width: 21px;
-  height: 21px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 5px;
-
-  background:
-    rgba(255, 100, 175, 0.15);
-
-  color: #ff9bcf;
-
-  font-size: 8px;
-}
-
-.policy-item p {
-  color: #cfc1d1;
-
-  font-size: 10px;
-
-  line-height: 1.55;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
   padding: 24px;
 
   text-align: center;
 
-  background:
-    rgba(10, 3, 20, 0.75);
+  background: rgba(10, 3, 20, 0.75);
 
-  border-top:
-    1px solid rgba(255, 160, 220, 0.2);
+  border-top: 1px solid rgba(255, 160, 220, 0.2);
 }
 
 .footer-logo {
@@ -836,11 +606,8 @@ footer {
   color: #fff;
 
   font-size: 18px;
-
   font-weight: 900;
-
   font-style: italic;
-
   letter-spacing: 2px;
 }
 
@@ -860,14 +627,11 @@ footer a {
   text-decoration: none;
 
   font-size: 10px;
-
   font-weight: 800;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 850px) {
 
@@ -881,10 +645,6 @@ footer a {
 
   .donation-grid,
   .information {
-    grid-template-columns: 1fr;
-  }
-
-  .policy-list {
     grid-template-columns: 1fr;
   }
 
@@ -919,14 +679,6 @@ footer a {
 
   .section-heading h2 {
     font-size: 27px;
-  }
-
-  .policy-box {
-    padding: 18px;
-  }
-
-  .policy-header h2 {
-    font-size: 20px;
   }
 
 }
